@@ -17,7 +17,7 @@ import React, {
 
 import Navigation from './common/Navigation';
 import Home from './home/Home';
-// import Message from './message/Message';
+import Message from './message/Message';
 import Personal from './person/Personal';
 // import Discover from './discover/Discover';
 
@@ -47,7 +47,7 @@ export default class MainPage extends Component {
         if(pageName == HOME_TAB){
             renderView = <Home navigator={this.props.navigator}/>;
         } else if(pageName == MESSAGE_TAB){
-            renderView = <View />
+            renderView = <Message navigator={this.props.navigator}/>
         } else if(pageName == DISCOVER_TAB){
             renderView = <View />
         } else if(pageName == PERSON_TAB){
