@@ -12,7 +12,7 @@ import React, {
 	ScrollView
 } from 'react-native';
 
-// import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import Util from '../common/Util';
 import Header from '../common/Header';
 
@@ -57,11 +57,11 @@ export default class JobDetail extends Component {
 					</View>
 
 					<View style={{padding: 15, flexDirection:'row'}}>
-
+						<Icon name="ios-location-outline" size={17} color="#11a984"></Icon>
 			          	<Text style={{marginRight:8,marginLeft:7,flex: 1}}>{job.info.split(' ')[0]}</Text>
-
+						<Icon name="bag" size={17} color="#11a984"></Icon>
 	  		          	<Text style={{marginRight:8,marginLeft:7,flex: 1}}>{job.info.split(' ')[1]}</Text>
-
+						<Icon name="ios-clock-outline" size={17} color="#11a984"></Icon>
 	  		          	<Text style={{marginRight:8,marginLeft:7,flex: 1}}>{job.info.split(' ')[2]}</Text>
 			        </View>
 					<Text style={{color:'#999',marginLeft:15,marginRight:15}}>
@@ -81,7 +81,7 @@ export default class JobDetail extends Component {
 					</TouchableOpacity>
 					<View style={styles.largeSeparator} />
 					<View  style={{padding:15,flexDirection:'row'}}>
-						 
+						<Icon name="ios-paper-outline" size={20} color="#CD4F39"> </Icon>
 						<Text style={{fontSize:17}}>职位描述</Text>
 					</View>
 					<View style={styles.separator} />
