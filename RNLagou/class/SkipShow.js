@@ -26,7 +26,7 @@ export default class SkipShow extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image source={require('./images/hello_page_bg.png')} style={styles.backgroundImage} />
+                <Image source={require('../images/hello_page_bg.png')} style={styles.backgroundImage} />
             </View>
         );
     }
