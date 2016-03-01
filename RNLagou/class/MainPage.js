@@ -19,7 +19,7 @@ import Navigation from './common/Navigation';
 import Home from './home/Home';
 import Message from './message/Message';
 import Personal from './person/Personal';
-// import Discover from './discover/Discover';
+import Discover from './discover/Discover';
 
 const HOME_TAB = 'homeTab';
 const MESSAGE_TAB = 'messageTab';
@@ -49,7 +49,7 @@ export default class MainPage extends Component {
         } else if(pageName == MESSAGE_TAB){
             renderView = <Message navigator={this.props.navigator}/>
         } else if(pageName == DISCOVER_TAB){
-            renderView = <View />
+            renderView = <Discover  navigator={this.props.navigator}/>
         } else if(pageName == PERSON_TAB){
             renderView = <Personal navigator={this.props.navigator}/>
         }
