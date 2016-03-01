@@ -108,9 +108,11 @@ export default class Discover extends Component {
     _renderPagination(index, total, context) {
         return (
             <View style={{position: 'absolute', bottom: 20,right: 10}}>
+                <View style={styles.countView}>
                 <Text style={styles.count}>
                     <Text>{Math.floor(index + 1)}</Text>/{total}
-                    </Text>
+                </Text>
+            </View>
             </View>
          )
     }
@@ -158,11 +160,16 @@ var styles = StyleSheet.create({
     count: {
 		width: 30,
 		height: 30,
-		borderRadius: 15,
 		textAlign:'center',
         color: '#787878',
 		lineHeight: 23,
-		backgroundColor: '#FFF',
+        backgroundColor:'transparent'
+	},
+    countView: {
+		width: 30,
+		height: 30,
+		borderRadius: 15,
+		backgroundColor: '#fff',
 		opacity: 0.9,
 	}
 });
