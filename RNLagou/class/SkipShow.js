@@ -12,16 +12,27 @@ import React, {
 } from 'react-native';
 
 import MainPage from './MainPage';
+import MainAndroidPage from './MainAndroidPage';
 
 export default class SkipShow extends Component {
     componentWillMount() {
         var { navigator } = this.props;
-        setTimeout(() => {
-            navigator.replace({
-                name : 'MainPage',
-                component : MainPage
-            });
-        },1000);
+        if (this.props.route.name == 'SkipShowAndroid') {
+            setTimeout(() => {
+                navigator.replace({
+                    name : 'MainAndroidPage',
+                    component : MainAndroidPage
+                });
+            },1000);
+        }else {
+            setTimeout(() => {
+                navigator.replace({
+                    name : 'MainPage',
+                    component : MainPage
+                });
+            },1000);
+        }
+
     }
     render() {
         return (

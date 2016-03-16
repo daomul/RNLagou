@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "react-native": "^0.20.0",
+    "react-native-scrollable-tab-view": "^0.3.8",
     "react-native-swiper": "^1.4.3",
-    "react-native-vector-icons": "^1.2.1"
+    "react-native-vector-icons": "^1.2.1",
+    "react-native-viewpager": "^0.2.1"
   }
 }

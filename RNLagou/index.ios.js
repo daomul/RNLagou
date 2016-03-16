@@ -17,7 +17,7 @@ import Navigation from './class/common/Navigation';
 
 class RNLagou extends Component {
   render() {
-      var defaultName = 'SkipShow';
+      var defaultName = 'SkipShowiOS';
       var defaultComponent = SkipShow;
       return (
           <Navigation component= {defaultComponent} name= {defaultName} />

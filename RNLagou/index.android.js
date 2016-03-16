@@ -8,24 +8,21 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
+
+
+import SkipShow from './class/SkipShow';
+import Navigation from './class/common/Navigation';
 
 class RNLagou extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+      var defaultName = 'SkipShowAndroid';
+      var defaultComponent = SkipShow;
+      return (
+          <Navigation component= {defaultComponent} name= {defaultName} />
+      );
   }
 }
 
@@ -36,15 +33,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  tabView: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: 'rgba(0,0,0,0.01)',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  icon: {
+    width: 300,
+    height: 300,
+    alignSelf: 'center',
+},
+card: {
+    borderWidth: 1,
+    backgroundColor: '#fff',
+    borderColor: 'rgba(0,0,0,0.1)',
+    margin: 5,
+    height: 150,
+    padding: 15,
+    shadowColor: '#ccc',
+    shadowOffset: {width: 2, height: 2},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
 });
 
