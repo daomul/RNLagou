@@ -23,7 +23,7 @@ export default class Personal extends Component {
             <View style={{flex: 1,backgroundColor:'#DEDEDE'}}>
                 <View style={{height: 160}}>
                     <Image source={require('../../images/img_user_photo_bg.png')}
-                           style={{flex:1,justifyContent:'center',alignItems:'center',resizeMode:'stretch',
+                           style={{flex:1,justifyContent:'center',alignItems:'center',
                                width:null, height:null}} >
                         <TouchableOpacity onPress={()=> this._onPressMys('photo')}>
                             <View

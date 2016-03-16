@@ -157,6 +157,6 @@ var styles = StyleSheet.create({
 		flex: 1,
 		marginTop: 20,
 		backgroundColor: '#EEEEEE',
-		// paddingBottom: 48,
+		paddingBottom: 48,
 	}
 });
