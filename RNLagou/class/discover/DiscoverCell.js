@@ -30,7 +30,7 @@ export default class DiscoverCell extends Component {
                           <Image style={styles.LargeImg} source={{uri: discoverData.logo}}/>
                       </View>
                       <Text style={{marginTop:7,marginBottom:12,lineHeight:18}}>{discoverData.infoTitle}</Text>
-                      <Text style={{marginTop:7,marginBottom:12,color:'#787878', lineHeight:15}} numberOfLines={2}>{discoverData.content}</Text>
+                      <Text style={{marginTop:7,marginBottom:12,color:'#787878', lineHeight:18}} numberOfLines={2}>{discoverData.content}</Text>
                       <View style={{flexDirection:'row'}}>
                           <Icon name='ios-pricetags-outline' size={15} color='#999'></Icon>
                           <Text style={{fontSize:12,color: '#999',marginLeft:5}}>{discoverData.info}</Text>

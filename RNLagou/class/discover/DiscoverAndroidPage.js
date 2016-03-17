@@ -55,7 +55,7 @@ export default class Discover extends Component {
                         title: '全部'
                     }}>
                 </Header>
-                <ScrollView style={{backgroundColor:'#eee',marginBottom:43}}
+                <ScrollView style={{backgroundColor:'#eee'}}
                             automaticallyAdjustContentInsets={false}>
                       <ViewPager
                             dataSource={this.state.headerDataSource}

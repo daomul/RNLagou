@@ -8,7 +8,8 @@ import React, {
     Image,
     ListView,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    Platform
 } from 'react-native';
 
 import JobRowCell from './JobRowCell';
@@ -35,9 +36,10 @@ class SearchBarCom extends Component {
     }
 }
 
-export default class Hoem extends Component {
+export default class Home extends Component {
     constructor() {
         super();
+
         var data = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
             dataSource: data.cloneWithRows(this._getRows({}))
@@ -51,8 +53,13 @@ export default class Hoem extends Component {
                                  dataSource= {this.state.dataSource}
                                  renderRow= {this._renderRow}
                                  renderHeader= {this._getHeaderView} />;
+
+        //  if (Platform.OS == 'ios') {
+        //
+        //  }
+
          return (
-            <View style= {styles.container}>
+            <View style= {[styles.container,Platform.OS == 'ios' ? styles.bmStyle : null]}>
                 <SearchBarCom />
                 {dataList}
             </View>
@@ -155,8 +162,10 @@ var styles = StyleSheet.create({
 
     container: {
 		flex: 1,
-		marginTop: 20,
 		backgroundColor: '#EEEEEE',
-		paddingBottom: 48,
-	}
+	},
+    bmStyle: {
+		marginTop: 20,
+        paddingBottom: 48,
+    }
 });
